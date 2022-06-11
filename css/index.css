@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: black;
+    user-select: none;
+}
+.bx {
+    margin: auto auto;
+    width: 800px;
+}
+body>.body{
+    background-color: #fafafa;
+}
+.top{
+    padding: 10px 50px;
+    margin-bottom: 30px;
+}
+td img {
+    width: 100px;
+    height: 100px;
+}
+.div{ 
+    background-color: #fff;
+    box-shadow: 1px 1px 4px rgba(171, 166, 166, 0.3);
+    border-radius: 3px;
+}
+.car {
+    width: 96px;
+    overflow: hidden;
+}
+
+
+/* <!-- 分页 --> */
+.paging {
+    text-align: center;
+}
+
+/* 删除按钮 */
+.again-btnDanger {
+    display: none;
+    color: black;
+    background-color: #fff;
+    width: 380px;
+    height: 180px;
+    position: fixed;
+    left: 50%;
+    top: 35%;
+    transform: translateX(-50%);
+    box-shadow: 1px 1px 4px rgba(171, 166, 166, 0.3);
+    border-radius: 3px;
+    z-index: 10;
+}
+
+.again-btnDanger>:first-child {
+    padding: 6px 10px;
+    background: #f0f4f7;
+    border-bottom: 1px #c7c7c7 solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+.again-btnDanger>:last-child {
+    display: flex;
+    justify-content: flex-end;
+    background: #f0f4f7;
+    border-top: 1px #c7c7c7 solid;
+}
+
+.again-btnDanger img {
+    width: 15px;
+    height: 15px;
+}
+
+.again-btnDanger p {
+    height: 47px;
+    line-height: 47px;
+    text-align: center;
+}
+
+.again-btnDanger input {
+    margin: 10px 10px;
+    width: 60px;
+}
+
+.again-btnDanger input:last-child {
+    margin-right: 48px;
+}
+
+
+/* 新增 */
+.add {
+    display: none;
+}
+.add .mask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9; 
+}
+.addpark{
+    padding: 10px 20px;
+    color: black;
+    background-color: #fff;
+    width: 900px;
+    height: 280px;
+    position: fixed;
+    left: 50%;
+    top:120px;
+    transform: translateX(-50%);
+    box-shadow: 1px 1px 4px rgba(171, 166, 166, 0.3);
+    border-radius: 3px;
+    z-index: 10; 
+}
+.addpark>div{
+    display: flex;
+}
+.addpark>div:first-child>div{
+    width: 400px;  
+    margin-right: 50px;
+    /* background-color: aquamarine; */
+}
+.addpark>div>div>div{
+    margin: 20px 0;
+}
+.add div .chepai{
+    display: flex;
+}
+
+.inp {
+    border: 1px solid rgb(166, 166, 166);
+    border-radius: 3px;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.header {
+    background-color: #fff;
+    align-items: center;
+    padding:0px 0px 16px 11px;
+    border-radius: 3px;
+    display: flex;
+}
+.header .inp {
+    width: 26px;
+    height: 30px;
+    line-height: 20px;
+    margin-right: 2px;
+}
+.header .inpText7{
+    margin-right: 10px;
+}
+.header_but {
+    margin-top: 2px;
+    color: #fff;
+    width: 42px;
+    height: 30px;
+    line-height: 23px;
+    /* margin-top: 25px;
+    margin-left: 30px; */
+    text-align: center;
+    /* background-color: rgb(45, 166, 144); */
+    border-radius: 3px;
+}
+.input-group-chepaih{
+    width: 90px;
+    height: 34px;
+    padding: 6px 13px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.footer {
+    display: none;
+    background-color: #fff;
+    padding:0 20px;
+    width: 900px;
+    padding: 0px 20px;
+    position: fixed;
+    left: 50%;
+    top: 280px;;
+    transform: translateX(-50%);
+    box-shadow: 0px 7px 4px rgba(171, 166, 166, 0.3);
+    border-radius: 3px;
+    z-index: 10;
+}
+.vanish {
+    text-align: center;
+    padding: 10px 0;
+}
+.vanish>img {
+    width: 30px;
+    height: 30px;
+}
+.footer_but {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.footer_but .inp {
+    width: 40px;
+    height:40px;
+    background-color: #fff;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    box-shadow: rgb(166, 166, 166) 1px 1px 1px 1px;
+}
+.footer_but2>div:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer_but2 .footterBut_dis {
+    background-color: #ededed;
+    color: #b7b7b7;
+}
+.footer_but2 .delet {
+    width: 83px;
+    height: 40px;
+    line-height: 43px;
+    text-align: center;
+    background-color: #b7b7b7;
+    border-radius: 6px;
+    margin-left: 420px;
+}
+.footer_but2 .delet>img {
+    width: 40%;
+    height: 40%;
+}
+.footer>.bx>div {
+    display: none;
+}
+
+.btn-add-confirm{
+    display: flex;
+    justify-content: flex-end;
+}
+.btn-add-confirm>:last-child{
+    margin-right: 53px;
+}
+
+
+/* 车位状态 */
+.switch{
+   width: 40px;
+   height: 20px;
+   border-radius: 10px;
+   position: relative;
+   background-color: #67C23A;;
+   cursor:pointer;
+   transform:all 400ms;
+   margin-left:5px;
+   margin-top:6px;
+}
+.switch .circle{
+    display: block;
+    width: 15px;
+    height:15px;
+    background-color:#fff;
+    border-radius:50%;
+    position:absolute;
+    top:50%;
+    right:3px;
+    transform:translate(0px,-50%);
+    transition:all 400ms;  
+}
+.stop_car {
+	display: flex;
+}
+.car-state{
+    display: flex;
+    align-items: center;
+    color:#555
+}
+.carState{
+    padding:0 10px;
+}
+.car_file{
+    display: flex;
+}
+.carImg{
+    margin-top: 4px;
+    margin-left: 30px;
+}
+

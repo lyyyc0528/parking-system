@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <!-- <link rel="stylesheet" href="./css/license_plate.css"> -->
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<body>
+<div class="body">
+
+   
+    <div class="top div">
+        <button class="btn btn-primary newadd">新增</button>
+        <button class="btn btn-success" disabled>修改</button>
+        <button class="btn btn-danger" disabled>删除</button>
+    </div>
+
+
+    <div class="div">
+    <table class="owner table table-hover">
+        <thead>
+            <tr>
+                <th>
+                    <input type="checkbox" name="" id="">
+                    <span>全选</span>
+                </th>
+                <th>编号</th>
+                <th>姓名</th>
+                <th>房号</th>
+                <th>手机号</th>
+                <th>车位号</th>
+                <th>车辆图片</th>
+                <th>车位状态</th>
+                <th>车辆</th>
+                <th>创建时间</th>
+                <th>最后更新时间</th>
+                <th>操作</th>
+
+            </tr>
+        </thead>
+      <tbody>
+        </tbody> 
+    </table>
+
+    <!-- 分页 -->
+    <nav aria-label="Page navigation" class="paging">
+        <ul class="pagination paging_ul">
+          <li class="previous ">
+            <a href="#" aria-label="Previous" >
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li  class="next">
+            <a href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+    </nav>
+    </div>
+
+
+    <!-- 删除按钮 -->
+    <div class="again-btnDanger">
+        <div>
+            <p>系统提示</p>
+            <img src="../img/删除 (1).png" class="btn-stop" alt="">
+        </div>
+        <p>请再次确认是否删除</p>
+        <div>
+            <input type="button" class="btn btn-primary btn-delet" value='删除' />
+            <input type="button" class="btn btn-stop" value='取消' />
+        </div>
+    </div>
+
+
+    <!-- 新增 -->
+    <div class="add" id="add">
+         <div class="mask"></div> 
+        <div class="addpark">
+        <div>
+        <div>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">*&nbsp;&nbsp;姓&nbsp;&nbsp;&nbsp;名&nbsp;&nbsp;</span>
+                <input type="text" class="form-control" id="username" placeholder="Name" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">*&nbsp;&nbsp;房&nbsp;&nbsp;&nbsp;号&nbsp;&nbsp;</span>
+                <input type="text" class="form-control" id="home_number" placeholder="home_number" aria-describedby="basic-addon1">
+            </div>
+            <div class="car-state">
+                <div class="input-group-chepaih">*车位状态</div>
+                <span class="carState">未停车</span>
+                <div class="stop_car">
+                    <!-- <p class="stop_car_title">未停车</p> -->
+                </div>
+                <span class="carState">已停满</span>
+            </div> 
+            <form class="car_file">
+                <div class="input-group-chepaih">车辆图片</div>
+                <div class="carImg">
+                    <input type="file" name="" id="file">
+                </div>
+            </form>
+        </div>
+
+        <div>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">*&nbsp;&nbsp;电&nbsp;&nbsp;话&nbsp;&nbsp;</span>
+                <input type="text" class="form-control" id="phone_number" placeholder="phone_number" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">*&nbsp;车&nbsp;位&nbsp;号</span>
+                <input type="text" class="form-control" id="park_lot" placeholder="park_lot" aria-describedby="basic-addon1">        
+            </div>
+            <div class="input-group chepai">
+                <div class="input-group-chepaih">*&nbsp;车&nbsp;&nbsp;量</div>
+                <div class="header" id="license1">
+                    <input type="text" class="inp inpText1" value="">
+                    <input type="text" class="inp inp2 inpText2" value="">
+                    <input type="text" class="inp inp2 inpText3" value="">
+                    <input type="text" class="inp inp2 inpText4" value="">
+                    <input type="text" class="inp inp2 inpText5" value="">
+                    <input type="text" class="inp inp2 inpText6" value="">
+                    <input type="text" class="inp inp2 inpText7" value="">
+                    <input type="button" class="header_but btn-primary" value="确认">
+                </div>
+            </div>
+        </div>
+        </div>
+
+    
+        
+     <div class="footer">
+        <div class="bx">
+    
+            <div class="footer_text footer_text1">
+                <div class="vanish">
+                    <img src="../img/icon_下拉箭头小.png" alt="">
+                </div>
+    
+                <div class="footer_but">
+                    <input type='button' class="inp" value="粤">
+                    <input type='button' class="inp" value="京">
+                    <input type='button' class="inp" value="沪">
+                    <input type='button' class="inp" value="津">
+                    <input type='button' class="inp" value="浙">
+                    <input type='button' class="inp" value="苏">
+                    <input type='button' class="inp" value="湘">
+                    <input type='button' class="inp" value="赣">
+                    <input type='button' class="inp" value="鄂">
+                    <input type='button' class="inp" value="豫">
+                    <input type='button' class="inp" value="皖">
+                    <input type='button' class="inp" value="陕">
+                    <input type='button' class="inp" value="甘">
+                    <input type='button' class="inp" value="宁">
+                    <input type='button' class="inp" value="云">
+                    <input type='button' class="inp" value="贵">
+                    <input type='button' class="inp" value="川">
+                    <input type='button' class="inp" value="渝">
+                    <input type='button' class="inp" value="黑">
+                    <input type='button' class="inp" value="吉">
+                    <input type='button' class="inp" value="辽">
+                    <input type='button' class="inp" value="晋">
+                    <input type='button' class="inp" value="冀">
+                    <input type='button' class="inp" value="鲁">
+                    <input type='button' class="inp" value="闽">
+                    <input type='button' class="inp" value="琼">
+                    <input type='button' class="inp" value="桂">
+                    <input type='button' class="inp" value="青">
+                    <input type='button' class="inp" value="藏">
+                    <input type='button' class="inp" value="新">
+                    <input type='button' class="inp" value="港">
+                    <input type='button' class="inp" value="澳">
+                    <input type='button' class="inp" value="无">
+                </div>
+            </div>
+    
+    
+            <div class="footer_text footer_text2">
+                <div class="vanish">
+                    <img src="../img/icon_下拉箭头小.png" alt="">
+                </div>
+    
+                <div class="footer_but footer_but2">
+                    <div>
+                        <input type='button' class="inp" value="1">
+                        <input type='button' class="inp" value="2">
+                        <input type='button' class="inp" value="3">
+                        <input type='button' class="inp" value="4">
+                        <input type='button' class="inp" value="5">
+                        <input type='button' class="inp" value="6">
+                        <input type='button' class="inp" value="7">
+                        <input type='button' class="inp" value="8">
+                        <input type='button' class="inp" value="9">
+                        <input type='button' class="inp" value="0">
+                    </div>
+                    <div>
+                        <input type='button' class="inp" value="A">
+                        <input type='button' class="inp" value="B">
+                        <input type='button' class="inp" value="C">
+                        <input type='button' class="inp" value="D">
+                        <input type='button' class="inp" value="E">
+                        <input type='button' class="inp" value="F">
+                        <input type='button' class="inp" value="G">
+                        <input type='button' class="inp" value="H">
+                        <input type='button' class="inp" value="I">
+                        <input type='button' class="inp" value="G">
+                        <input type='button' class="inp" value="K">
+                        <input type='button' class="inp" value="L">
+                        <input type='button' class="inp" value="M">
+                        <input type='button' class="inp" value="N">
+                        <input type='button' class="inp" value="O">
+                        <input type='button' class="inp" value="P">
+                        <input type='button' class="inp" value="Q">
+                        <input type='button' class="inp" value="R">
+                        <input type='button' class="inp" value="S">
+                        <input type='button' class="inp" value="T">
+                        <input type='button' class="inp" value="U">
+                        <input type='button' class="inp" value="V">
+                        <input type='button' class="inp" value="W">
+                        <input type='button' class="inp" value="X">
+                        <input type='button' class="inp" value="Y">
+                        <input type='button' class="inp" value="Z">
+                    </div>
+                    <div>
+                        <div>
+                            <input type='button' class="inp footterBut_dis" disabled value="港">
+                            <input type='button' class="inp footterBut_dis" disabled value="澳">
+                            <input type='button' class="inp footterBut_dis" disabled value="学">
+                            <input type='button' class="inp footterBut_dis" disabled value="领">
+                        </div>
+                        <div class="delet">
+                            <img src="../img/删除.png" alt="">
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="footer_text footer_text3">
+                <div class="vanish">
+                    <img src="../img/icon_下拉箭头小.png" alt="">
+                </div>
+    
+                <div class="footer_but footer_but2">
+                    <div>
+                        <input type='button' class="inp" value="1">
+                        <input type='button' class="inp" value="2">
+                        <input type='button' class="inp" value="3">
+                        <input type='button' class="inp" value="4">
+                        <input type='button' class="inp" value="5">
+                        <input type='button' class="inp" value="6">
+                        <input type='button' class="inp" value="7">
+                        <input type='button' class="inp" value="8">
+                        <input type='button' class="inp" value="9">
+                        <input type='button' class="inp" value="0">
+                    </div>
+                    <div>
+                        <input type='button' class="inp" value="A">
+                        <input type='button' class="inp" value="B">
+                        <input type='button' class="inp" value="C">
+                        <input type='button' class="inp" value="D">
+                        <input type='button' class="inp" value="E">
+                        <input type='button' class="inp" value="F">
+                        <input type='button' class="inp" value="G">
+                        <input type='button' class="inp" value="H">
+                        <input type='button' class="inp" value="I">
+                        <input type='button' class="inp" value="G">
+                        <input type='button' class="inp" value="K">
+                        <input type='button' class="inp" value="L">
+                        <input type='button' class="inp" value="M">
+                        <input type='button' class="inp" value="N">
+                        <input type='button' class="inp" value="O">
+                        <input type='button' class="inp" value="P">
+                        <input type='button' class="inp" value="Q">
+                        <input type='button' class="inp" value="R">
+                        <input type='button' class="inp" value="S">
+                        <input type='button' class="inp" value="T">
+                        <input type='button' class="inp" value="U">
+                        <input type='button' class="inp" value="V">
+                        <input type='button' class="inp" value="W">
+                        <input type='button' class="inp" value="X">
+                        <input type='button' class="inp" value="Y">
+                        <input type='button' class="inp" value="Z">
+                    </div>
+                    <div>
+                        <div>
+                            <input type='button' class="inp footterBut_dis" disabled value="港">
+                            <input type='button' class="inp footterBut_dis" disabled value="澳">
+                            <input type='button' class="inp footterBut_dis" disabled value="学">
+                            <input type='button' class="inp footterBut_dis" disabled value="领">
+                        </div>
+                        <div class="delet">
+                            <img src="../img/删除.png" alt="">
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="footer_text footer_text4">
+                <div class="vanish">
+                    <img src="../img/icon_下拉箭头小.png" alt="">
+                </div>
+    
+                <div class="footer_but footer_but2">
+                    <div>
+                        <input type='button' class="inp" value="1">
+                        <input type='button' class="inp" value="2">
+                        <input type='button' class="inp" value="3">
+                        <input type='button' class="inp" value="4">
+                        <input type='button' class="inp" value="5">
+                        <input type='button' class="inp" value="6">
+                        <input type='button' class="inp" value="7">
+                        <input type='button' class="inp" value="8">
+                        <input type='button' class="inp" value="9">
+                        <input type='button' class="inp" value="0">
+                    </div>
+                    <div>
+                        <input type='button' class="inp" value="A">
+                        <input type='button' class="inp" value="B">
+                        <input type='button' class="inp" value="C">
+                        <input type='button' class="inp" value="D">
+                        <input type='button' class="inp" value="E">
+                        <input type='button' class="inp" value="F">
+                        <input type='button' class="inp" value="G">
+                        <input type='button' class="inp" value="H">
+                        <input type='button' class="inp" value="I">
+                        <input type='button' class="inp" value="G">
+                        <input type='button' class="inp" value="K">
+                        <input type='button' class="inp" value="L">
+                        <input type='button' class="inp" value="M">
+                        <input type='button' class="inp" value="N">
+                        <input type='button' class="inp" value="O">
+                        <input type='button' class="inp" value="P">
+                        <input type='button' class="inp" value="Q">
+                        <input type='button' class="inp" value="R">
+                        <input type='button' class="inp" value="S">
+                        <input type='button' class="inp" value="T">
+                        <input type='button' class="inp" value="U">
+                        <input type='button' class="inp" value="V">
+                        <input type='button' class="inp" value="W">
+                        <input type='button' class="inp" value="X">
+                        <input type='button' class="inp" value="Y">
+                        <input type='button' class="inp" value="Z">
+                    </div>
+                    <div>
+                        <div>
+                            <input type='button' class="inp footterBut_dis" disabled value="港">
+                            <input type='button' class="inp footterBut_dis" disabled value="澳">
+                            <input type='button' class="inp footterBut_dis" disabled value="学">
+                            <input type='button' class="inp footterBut_dis" disabled value="领">
+                        </div>
+                        <div class="delet">
+                            <img src="../img/删除.png" alt="">
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="footer_text footer_text5">
+                <div class="vanish">
+                    <img src="../img/icon_下拉箭头小.png" alt="">
+                </div>
+    
+                <div class="footer_but footer_but2">
+                    <div>
+                        <input type='button' class="inp" value="1">
+                        <input type='button' class="inp" value="2">
+                        <input type='button' class="inp" value="3">
+                        <input type='button' class="inp" value="4">
+                        <input type='button' class="inp" value="5">
+                        <input type='button' class="inp" value="6">
+                        <input type='button' class="inp" value="7">
+                        <input type='button' class="inp" value="8">
+                        <input type='button' class="inp" value="9">
+                        <input type='button' class="inp" value="0">
+                    </div>
+                    <div>
+                        <input type='button' class="inp" value="A">
+                        <input type='button' class="inp" value="B">
+                        <input type='button' class="inp" value="C">
+                        <input type='button' class="inp" value="D">
+                        <input type='button' class="inp" value="E">
+                        <input type='button' class="inp" value="F">
+                        <input type='button' class="inp" value="G">
+                        <input type='button' class="inp" value="H">
+                        <input type='button' class="inp" value="I">
+                        <input type='button' class="inp" value="G">
+                        <input type='button' class="inp" value="K">
+                        <input type='button' class="inp" value="L">
+                        <input type='button' class="inp" value="M">
+                        <input type='button' class="inp" value="N">
+                        <input type='button' class="inp" value="O">
+                        <input type='button' class="inp" value="P">
+                        <input type='button' class="inp" value="Q">
+                        <input type='button' class="inp" value="R">
+                        <input type='button' class="inp" value="S">
+                        <input type='button' class="inp" value="T">
+                        <input type='button' class="inp" value="U">
+                        <input type='button' class="inp" value="V">
+                        <input type='button' class="inp" value="W">
+                        <input type='button' class="inp" value="X">
+                        <input type='button' class="inp" value="Y">
+                        <input type='button' class="inp" value="Z">
+                    </div>
+                    <div>
+                        <div>
+                            <input type='button' class="inp footterBut_dis" disabled value="港">
+                            <input type='button' class="inp footterBut_dis" disabled value="澳">
+                            <input type='button' class="inp footterBut_dis" disabled value="学">
+                            <input type='button' class="inp footterBut_dis" disabled value="领">
+                        </div>
+                        <div class="delet">
+                            <img src="../img/删除.png" alt="">
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="footer_text footer_text6">
+                <div class="vanish">
+                    <img src="../img/icon_下拉箭头小.png" alt="">
+                </div>
+    
+                <div class="footer_but footer_but2">
+                    <div>
+                        <input type='button' class="inp" value="1">
+                        <input type='button' class="inp" value="2">
+                        <input type='button' class="inp" value="3">
+                        <input type='button' class="inp" value="4">
+                        <input type='button' class="inp" value="5">
+                        <input type='button' class="inp" value="6">
+                        <input type='button' class="inp" value="7">
+                        <input type='button' class="inp" value="8">
+                        <input type='button' class="inp" value="9">
+                        <input type='button' class="inp" value="0">
+                    </div>
+                    <div>
+                        <input type='button' class="inp" value="A">
+                        <input type='button' class="inp" value="B">
+                        <input type='button' class="inp" value="C">
+                        <input type='button' class="inp" value="D">
+                        <input type='button' class="inp" value="E">
+                        <input type='button' class="inp" value="F">
+                        <input type='button' class="inp" value="G">
+                        <input type='button' class="inp" value="H">
+                        <input type='button' class="inp" value="I">
+                        <input type='button' class="inp" value="G">
+                        <input type='button' class="inp" value="K">
+                        <input type='button' class="inp" value="L">
+                        <input type='button' class="inp" value="M">
+                        <input type='button' class="inp" value="N">
+                        <input type='button' class="inp" value="O">
+                        <input type='button' class="inp" value="P">
+                        <input type='button' class="inp" value="Q">
+                        <input type='button' class="inp" value="R">
+                        <input type='button' class="inp" value="S">
+                        <input type='button' class="inp" value="T">
+                        <input type='button' class="inp" value="U">
+                        <input type='button' class="inp" value="V">
+                        <input type='button' class="inp" value="W">
+                        <input type='button' class="inp" value="X">
+                        <input type='button' class="inp" value="Y">
+                        <input type='button' class="inp" value="Z">
+                    </div>
+                    <div>
+                        <div>
+                            <input type='button' class="inp footterBut_dis" disabled value="港">
+                            <input type='button' class="inp footterBut_dis" disabled value="澳">
+                            <input type='button' class="inp footterBut_dis" disabled value="学">
+                            <input type='button' class="inp footterBut_dis" disabled value="领">
+                        </div>
+                        <div class="delet">
+                            <img src="../img/删除.png" alt="">
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="footer_text footer_text7">
+                <div class="vanish">
+                    <img src="../img/icon_下拉箭头小.png" alt="">
+                </div>
+    
+                <div class="footer_but footer_but2">
+                    <div>
+                        <input type='button' class="inp" value="1">
+                        <input type='button' class="inp" value="2">
+                        <input type='button' class="inp" value="3">
+                        <input type='button' class="inp" value="4">
+                        <input type='button' class="inp" value="5">
+                        <input type='button' class="inp" value="6">
+                        <input type='button' class="inp" value="7">
+                        <input type='button' class="inp" value="8">
+                        <input type='button' class="inp" value="9">
+                        <input type='button' class="inp" value="0">
+                    </div>
+                    <div>
+                        <input type='button' class="inp" value="A">
+                        <input type='button' class="inp" value="B">
+                        <input type='button' class="inp" value="C">
+                        <input type='button' class="inp" value="D">
+                        <input type='button' class="inp" value="E">
+                        <input type='button' class="inp" value="F">
+                        <input type='button' class="inp" value="G">
+                        <input type='button' class="inp" value="H">
+                        <input type='button' class="inp" value="I">
+                        <input type='button' class="inp" value="G">
+                        <input type='button' class="inp" value="K">
+                        <input type='button' class="inp" value="L">
+                        <input type='button' class="inp" value="M">
+                        <input type='button' class="inp" value="N">
+                        <input type='button' class="inp" value="O">
+                        <input type='button' class="inp" value="P">
+                        <input type='button' class="inp" value="Q">
+                        <input type='button' class="inp" value="R">
+                        <input type='button' class="inp" value="S">
+                        <input type='button' class="inp" value="T">
+                        <input type='button' class="inp" value="U">
+                        <input type='button' class="inp" value="V">
+                        <input type='button' class="inp" value="W">
+                        <input type='button' class="inp" value="X">
+                        <input type='button' class="inp" value="Y">
+                        <input type='button' class="inp" value="Z">
+                    </div>
+                    <div>
+                        <div>
+                            <input type='button' class="inp footterBut_dis" disabled value="港">
+                            <input type='button' class="inp footterBut_dis" disabled value="澳">
+                            <input type='button' class="inp footterBut_dis" disabled value="学">
+                            <input type='button' class="inp footterBut_dis" disabled value="领">
+                        </div>
+                        <div class="delet">
+                            <img src="../img/删除.png" alt="">
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="footer_text footer_text8">
+                <div class="vanish">
+                    <img src="../img/icon_下拉箭头小.png" alt="">
+                </div>
+            </div>
+    
+        </div>
+     </div>
+
+
+     <div class="form-group btn-add-confirm">
+        <button class="btn btn-primary" id="enter">确认</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+          <button class="btn btn-default" id="cancel">取消</button>
+      </div>
+  
+    </div>
+    </div>
+
+
+    <!-- 编辑 -->
+    <div class="add" id="edit-add">
+         <div class="mask"></div> 
+        <div class="addpark">
+            <div>
+                <div>
+                    <div class="input-group">
+                        <span class="input-group-addon"
+                            id="basic-addon1">*&nbsp;&nbsp;姓&nbsp;&nbsp;&nbsp;名&nbsp;&nbsp;</span>
+                        <input type="text" class="form-control" id="username" placeholder="Name"
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"
+                            id="basic-addon1">*&nbsp;&nbsp;房&nbsp;&nbsp;&nbsp;号&nbsp;&nbsp;</span>
+                        <input type="text" class="form-control" id="home_number" placeholder="home_number"
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <div class="car-state">
+                        <div class="input-group-chepaih">*车位状态</div>
+                        <span class="carState">未停车</span>
+                        <div class="stop_car">
+                            <!-- <p class="stop_car_title">未停车</p> -->
+                        </div>
+                        <span class="carState">已停满</span>
+                    </div>
+                </div>
+    
+                <div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">*&nbsp;&nbsp;电&nbsp;&nbsp;话&nbsp;&nbsp;</span>
+                        <input type="text" class="form-control" id="phone_number" placeholder="phone_number"
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">*&nbsp;车&nbsp;位&nbsp;号</span>
+                        <input type="text" class="form-control" id="park_lot" placeholder="park_lot"
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group chepai">
+                        <div class="input-group-chepaih">*&nbsp;车&nbsp;&nbsp;量</div>
+                        <div class="header">
+                            <input type="text" class="inp inpText1" value="">
+                            <input type="text" class="inp inp2 inpText2" value="">
+                            <input type="text" class="inp inp2 inpText3" value="">
+                            <input type="text" class="inp inp2 inpText4" value="">
+                            <input type="text" class="inp inp2 inpText5" value="">
+                            <input type="text" class="inp inp2 inpText6" value="">
+                            <input type="text" class="inp inp2 inpText7" value="">
+                            <input type="button" class="header_but btn-primary" value="确定">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="footer">
+                <div class="bx">
+    
+                    <div class="footer_text footer_text1">
+                        <div class="vanish">
+                            <img src="../img/icon_下拉箭头小.png" alt="">
+                        </div>
+    
+                        <div class="footer_but">
+                            <input type='button' class="inp" value="粤">
+                            <input type='button' class="inp" value="京">
+                            <input type='button' class="inp" value="沪">
+                            <input type='button' class="inp" value="津">
+                            <input type='button' class="inp" value="浙">
+                            <input type='button' class="inp" value="苏">
+                            <input type='button' class="inp" value="湘">
+                            <input type='button' class="inp" value="赣">
+                            <input type='button' class="inp" value="鄂">
+                            <input type='button' class="inp" value="豫">
+                            <input type='button' class="inp" value="皖">
+                            <input type='button' class="inp" value="陕">
+                            <input type='button' class="inp" value="甘">
+                            <input type='button' class="inp" value="宁">
+                            <input type='button' class="inp" value="云">
+                            <input type='button' class="inp" value="贵">
+                            <input type='button' class="inp" value="川">
+                            <input type='button' class="inp" value="渝">
+                            <input type='button' class="inp" value="黑">
+                            <input type='button' class="inp" value="吉">
+                            <input type='button' class="inp" value="辽">
+                            <input type='button' class="inp" value="晋">
+                            <input type='button' class="inp" value="冀">
+                            <input type='button' class="inp" value="鲁">
+                            <input type='button' class="inp" value="闽">
+                            <input type='button' class="inp" value="琼">
+                            <input type='button' class="inp" value="桂">
+                            <input type='button' class="inp" value="青">
+                            <input type='button' class="inp" value="藏">
+                            <input type='button' class="inp" value="新">
+                            <input type='button' class="inp" value="港">
+                            <input type='button' class="inp" value="澳">
+                            <input type='button' class="inp" value="无">
+                        </div>
+                    </div>
+    
+    
+                    <div class="footer_text footer_text2">
+                        <div class="vanish">
+                            <img src="../img/icon_下拉箭头小.png" alt="">
+                        </div>
+    
+                        <div class="footer_but footer_but2">
+                            <div>
+                                <input type='button' class="inp" value="1">
+                                <input type='button' class="inp" value="2">
+                                <input type='button' class="inp" value="3">
+                                <input type='button' class="inp" value="4">
+                                <input type='button' class="inp" value="5">
+                                <input type='button' class="inp" value="6">
+                                <input type='button' class="inp" value="7">
+                                <input type='button' class="inp" value="8">
+                                <input type='button' class="inp" value="9">
+                                <input type='button' class="inp" value="0">
+                            </div>
+                            <div>
+                                <input type='button' class="inp" value="A">
+                                <input type='button' class="inp" value="B">
+                                <input type='button' class="inp" value="C">
+                                <input type='button' class="inp" value="D">
+                                <input type='button' class="inp" value="E">
+                                <input type='button' class="inp" value="F">
+                                <input type='button' class="inp" value="G">
+                                <input type='button' class="inp" value="H">
+                                <input type='button' class="inp" value="I">
+                                <input type='button' class="inp" value="G">
+                                <input type='button' class="inp" value="K">
+                                <input type='button' class="inp" value="L">
+                                <input type='button' class="inp" value="M">
+                                <input type='button' class="inp" value="N">
+                                <input type='button' class="inp" value="O">
+                                <input type='button' class="inp" value="P">
+                                <input type='button' class="inp" value="Q">
+                                <input type='button' class="inp" value="R">
+                                <input type='button' class="inp" value="S">
+                                <input type='button' class="inp" value="T">
+                                <input type='button' class="inp" value="U">
+                                <input type='button' class="inp" value="V">
+                                <input type='button' class="inp" value="W">
+                                <input type='button' class="inp" value="X">
+                                <input type='button' class="inp" value="Y">
+                                <input type='button' class="inp" value="Z">
+                            </div>
+                            <div>
+                                <div>
+                                    <input type='button' class="inp footterBut_dis" disabled value="港">
+                                    <input type='button' class="inp footterBut_dis" disabled value="澳">
+                                    <input type='button' class="inp footterBut_dis" disabled value="学">
+                                    <input type='button' class="inp footterBut_dis" disabled value="领">
+                                </div>
+                                <div class="delet">
+                                    <img src="../img/删除.png" alt="">
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="footer_text footer_text3">
+                        <div class="vanish">
+                            <img src="../img/icon_下拉箭头小.png" alt="">
+                        </div>
+    
+                        <div class="footer_but footer_but2">
+                            <div>
+                                <input type='button' class="inp" value="1">
+                                <input type='button' class="inp" value="2">
+                                <input type='button' class="inp" value="3">
+                                <input type='button' class="inp" value="4">
+                                <input type='button' class="inp" value="5">
+                                <input type='button' class="inp" value="6">
+                                <input type='button' class="inp" value="7">
+                                <input type='button' class="inp" value="8">
+                                <input type='button' class="inp" value="9">
+                                <input type='button' class="inp" value="0">
+                            </div>
+                            <div>
+                                <input type='button' class="inp" value="A">
+                                <input type='button' class="inp" value="B">
+                                <input type='button' class="inp" value="C">
+                                <input type='button' class="inp" value="D">
+                                <input type='button' class="inp" value="E">
+                                <input type='button' class="inp" value="F">
+                                <input type='button' class="inp" value="G">
+                                <input type='button' class="inp" value="H">
+                                <input type='button' class="inp" value="I">
+                                <input type='button' class="inp" value="G">
+                                <input type='button' class="inp" value="K">
+                                <input type='button' class="inp" value="L">
+                                <input type='button' class="inp" value="M">
+                                <input type='button' class="inp" value="N">
+                                <input type='button' class="inp" value="O">
+                                <input type='button' class="inp" value="P">
+                                <input type='button' class="inp" value="Q">
+                                <input type='button' class="inp" value="R">
+                                <input type='button' class="inp" value="S">
+                                <input type='button' class="inp" value="T">
+                                <input type='button' class="inp" value="U">
+                                <input type='button' class="inp" value="V">
+                                <input type='button' class="inp" value="W">
+                                <input type='button' class="inp" value="X">
+                                <input type='button' class="inp" value="Y">
+                                <input type='button' class="inp" value="Z">
+                            </div>
+                            <div>
+                                <div>
+                                    <input type='button' class="inp footterBut_dis" disabled value="港">
+                                    <input type='button' class="inp footterBut_dis" disabled value="澳">
+                                    <input type='button' class="inp footterBut_dis" disabled value="学">
+                                    <input type='button' class="inp footterBut_dis" disabled value="领">
+                                </div>
+                                <div class="delet">
+                                    <img src="../img/删除.png" alt="">
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="footer_text footer_text4">
+                        <div class="vanish">
+                            <img src="../img/icon_下拉箭头小.png" alt="">
+                        </div>
+    
+                        <div class="footer_but footer_but2">
+                            <div>
+                                <input type='button' class="inp" value="1">
+                                <input type='button' class="inp" value="2">
+                                <input type='button' class="inp" value="3">
+                                <input type='button' class="inp" value="4">
+                                <input type='button' class="inp" value="5">
+                                <input type='button' class="inp" value="6">
+                                <input type='button' class="inp" value="7">
+                                <input type='button' class="inp" value="8">
+                                <input type='button' class="inp" value="9">
+                                <input type='button' class="inp" value="0">
+                            </div>
+                            <div>
+                                <input type='button' class="inp" value="A">
+                                <input type='button' class="inp" value="B">
+                                <input type='button' class="inp" value="C">
+                                <input type='button' class="inp" value="D">
+                                <input type='button' class="inp" value="E">
+                                <input type='button' class="inp" value="F">
+                                <input type='button' class="inp" value="G">
+                                <input type='button' class="inp" value="H">
+                                <input type='button' class="inp" value="I">
+                                <input type='button' class="inp" value="G">
+                                <input type='button' class="inp" value="K">
+                                <input type='button' class="inp" value="L">
+                                <input type='button' class="inp" value="M">
+                                <input type='button' class="inp" value="N">
+                                <input type='button' class="inp" value="O">
+                                <input type='button' class="inp" value="P">
+                                <input type='button' class="inp" value="Q">
+                                <input type='button' class="inp" value="R">
+                                <input type='button' class="inp" value="S">
+                                <input type='button' class="inp" value="T">
+                                <input type='button' class="inp" value="U">
+                                <input type='button' class="inp" value="V">
+                                <input type='button' class="inp" value="W">
+                                <input type='button' class="inp" value="X">
+                                <input type='button' class="inp" value="Y">
+                                <input type='button' class="inp" value="Z">
+                            </div>
+                            <div>
+                                <div>
+                                    <input type='button' class="inp footterBut_dis" disabled value="港">
+                                    <input type='button' class="inp footterBut_dis" disabled value="澳">
+                                    <input type='button' class="inp footterBut_dis" disabled value="学">
+                                    <input type='button' class="inp footterBut_dis" disabled value="领">
+                                </div>
+                                <div class="delet">
+                                    <img src="./img/删除.png" alt="">
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="footer_text footer_text5">
+                        <div class="vanish">
+                            <img src="../img/icon_下拉箭头小.png" alt="">
+                        </div>
+    
+                        <div class="footer_but footer_but2">
+                            <div>
+                                <input type='button' class="inp" value="1">
+                                <input type='button' class="inp" value="2">
+                                <input type='button' class="inp" value="3">
+                                <input type='button' class="inp" value="4">
+                                <input type='button' class="inp" value="5">
+                                <input type='button' class="inp" value="6">
+                                <input type='button' class="inp" value="7">
+                                <input type='button' class="inp" value="8">
+                                <input type='button' class="inp" value="9">
+                                <input type='button' class="inp" value="0">
+                            </div>
+                            <div>
+                                <input type='button' class="inp" value="A">
+                                <input type='button' class="inp" value="B">
+                                <input type='button' class="inp" value="C">
+                                <input type='button' class="inp" value="D">
+                                <input type='button' class="inp" value="E">
+                                <input type='button' class="inp" value="F">
+                                <input type='button' class="inp" value="G">
+                                <input type='button' class="inp" value="H">
+                                <input type='button' class="inp" value="I">
+                                <input type='button' class="inp" value="G">
+                                <input type='button' class="inp" value="K">
+                                <input type='button' class="inp" value="L">
+                                <input type='button' class="inp" value="M">
+                                <input type='button' class="inp" value="N">
+                                <input type='button' class="inp" value="O">
+                                <input type='button' class="inp" value="P">
+                                <input type='button' class="inp" value="Q">
+                                <input type='button' class="inp" value="R">
+                                <input type='button' class="inp" value="S">
+                                <input type='button' class="inp" value="T">
+                                <input type='button' class="inp" value="U">
+                                <input type='button' class="inp" value="V">
+                                <input type='button' class="inp" value="W">
+                                <input type='button' class="inp" value="X">
+                                <input type='button' class="inp" value="Y">
+                                <input type='button' class="inp" value="Z">
+                            </div>
+                            <div>
+                                <div>
+                                    <input type='button' class="inp footterBut_dis" disabled value="港">
+                                    <input type='button' class="inp footterBut_dis" disabled value="澳">
+                                    <input type='button' class="inp footterBut_dis" disabled value="学">
+                                    <input type='button' class="inp footterBut_dis" disabled value="领">
+                                </div>
+                                <div class="delet">
+                                    <img src="../img/删除.png" alt="">
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="footer_text footer_text6">
+                        <div class="vanish">
+                            <img src="./img/icon_下拉箭头小.png" alt="">
+                        </div>
+    
+                        <div class="footer_but footer_but2">
+                            <div>
+                                <input type='button' class="inp" value="1">
+                                <input type='button' class="inp" value="2">
+                                <input type='button' class="inp" value="3">
+                                <input type='button' class="inp" value="4">
+                                <input type='button' class="inp" value="5">
+                                <input type='button' class="inp" value="6">
+                                <input type='button' class="inp" value="7">
+                                <input type='button' class="inp" value="8">
+                                <input type='button' class="inp" value="9">
+                                <input type='button' class="inp" value="0">
+                            </div>
+                            <div>
+                                <input type='button' class="inp" value="A">
+                                <input type='button' class="inp" value="B">
+                                <input type='button' class="inp" value="C">
+                                <input type='button' class="inp" value="D">
+                                <input type='button' class="inp" value="E">
+                                <input type='button' class="inp" value="F">
+                                <input type='button' class="inp" value="G">
+                                <input type='button' class="inp" value="H">
+                                <input type='button' class="inp" value="I">
+                                <input type='button' class="inp" value="G">
+                                <input type='button' class="inp" value="K">
+                                <input type='button' class="inp" value="L">
+                                <input type='button' class="inp" value="M">
+                                <input type='button' class="inp" value="N">
+                                <input type='button' class="inp" value="O">
+                                <input type='button' class="inp" value="P">
+                                <input type='button' class="inp" value="Q">
+                                <input type='button' class="inp" value="R">
+                                <input type='button' class="inp" value="S">
+                                <input type='button' class="inp" value="T">
+                                <input type='button' class="inp" value="U">
+                                <input type='button' class="inp" value="V">
+                                <input type='button' class="inp" value="W">
+                                <input type='button' class="inp" value="X">
+                                <input type='button' class="inp" value="Y">
+                                <input type='button' class="inp" value="Z">
+                            </div>
+                            <div>
+                                <div>
+                                    <input type='button' class="inp footterBut_dis" disabled value="港">
+                                    <input type='button' class="inp footterBut_dis" disabled value="澳">
+                                    <input type='button' class="inp footterBut_dis" disabled value="学">
+                                    <input type='button' class="inp footterBut_dis" disabled value="领">
+                                </div>
+                                <div class="delet">
+                                    <img src="../img/删除.png" alt="">
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="footer_text footer_text7">
+                        <div class="vanish">
+                            <img src="../img/icon_下拉箭头小.png" alt="">
+                        </div>
+    
+                        <div class="footer_but footer_but2">
+                            <div>
+                                <input type='button' class="inp" value="1">
+                                <input type='button' class="inp" value="2">
+                                <input type='button' class="inp" value="3">
+                                <input type='button' class="inp" value="4">
+                                <input type='button' class="inp" value="5">
+                                <input type='button' class="inp" value="6">
+                                <input type='button' class="inp" value="7">
+                                <input type='button' class="inp" value="8">
+                                <input type='button' class="inp" value="9">
+                                <input type='button' class="inp" value="0">
+                            </div>
+                            <div>
+                                <input type='button' class="inp" value="A">
+                                <input type='button' class="inp" value="B">
+                                <input type='button' class="inp" value="C">
+                                <input type='button' class="inp" value="D">
+                                <input type='button' class="inp" value="E">
+                                <input type='button' class="inp" value="F">
+                                <input type='button' class="inp" value="G">
+                                <input type='button' class="inp" value="H">
+                                <input type='button' class="inp" value="I">
+                                <input type='button' class="inp" value="G">
+                                <input type='button' class="inp" value="K">
+                                <input type='button' class="inp" value="L">
+                                <input type='button' class="inp" value="M">
+                                <input type='button' class="inp" value="N">
+                                <input type='button' class="inp" value="O">
+                                <input type='button' class="inp" value="P">
+                                <input type='button' class="inp" value="Q">
+                                <input type='button' class="inp" value="R">
+                                <input type='button' class="inp" value="S">
+                                <input type='button' class="inp" value="T">
+                                <input type='button' class="inp" value="U">
+                                <input type='button' class="inp" value="V">
+                                <input type='button' class="inp" value="W">
+                                <input type='button' class="inp" value="X">
+                                <input type='button' class="inp" value="Y">
+                                <input type='button' class="inp" value="Z">
+                            </div>
+                            <div>
+                                <div>
+                                    <input type='button' class="inp footterBut_dis" disabled value="港">
+                                    <input type='button' class="inp footterBut_dis" disabled value="澳">
+                                    <input type='button' class="inp footterBut_dis" disabled value="学">
+                                    <input type='button' class="inp footterBut_dis" disabled value="领">
+                                </div>
+                                <div class="delet">
+                                    <img src="../img/删除.png" alt="">
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+    
+    
+            <div class="form-group btn-add-confirm">
+                <button class="btn btn-primary" id="edit_enter">确认</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-default" id="edit_cancel">取消</button>
+            </div>
+    
+        </div>
+    </div>
+   
+
+  
+
+</div>
+</body>
+<script src="../js/jquery-3.6.0.js"></script>
+<script src="../js/license_plate.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/art-template.js"></script>
+<script src="../js/switch.js"></script>
+<script id="tpl-owner" type="text/html">
+    {{each $data}}
+    <tr>
+        <td>
+            <input type="checkbox" name="" id="">
+        </td>
+        <td>{{$value.id}}</td>
+        <td>{{$value.name}}</td>
+        <td>{{$value.home_number}}</td>
+        <td>{{$value.phone_number}}</td>
+        <td>{{$value.park_lot}}</td>
+        <td>
+            <img src={{$value.carlist[0]|a}}>
+        </td>
+        <td>
+            {{if $value.park_state=='0'}}
+            <span>未停车</span>
+            {{else if $value.park_state=='1'}}
+            <span>已停满</span>
+            {{/if}}
+        </td>
+        <td  class="car">
+            {{each $value.carlist}}
+               <span>{{$value.license}}</span>
+            {{/each}}
+        </td>
+        <td>
+            {{$value.create_time|dateFormat}}
+        </td>
+        <td>{{$value.update_time|dateFormat}}</td>
+        <td>
+            <button class="btn btn-primary edit" data-index="{{$index}}">编辑</button>
+            <button class="btn btn-danger" data-index="{{$index}}"> 删除</button>
+            <button class="btn btn-success" data-index="{{$index}}">更多操作</button>
+        </td>
+    </tr>
+    {{/each}}
+</script>
+</html>
